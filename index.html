@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <style>
+        /* Reset some default browser styles */
+        body, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Define the main styling */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header #logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f4f4f4;
+        }
+
+        #headshot {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 0;
+            background-color: #fff;
+        }
+
+        #headshot img {
+            max-width: 200px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        /* Timeline styles */
+        #projects {
+            padding: 2rem 1rem;
+            background-color: #fff;
+        }
+
+        #projects h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 15px;
+            bottom: 0;
+            width: 2px;
+            background: repeating-linear-gradient(to bottom, #333, #333 5px, transparent 5px, transparent 10px);
+        }
+
+        .project-card {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-point {
+            width: 30px;
+            height: 30px;
+            background-color: #333;
+            border-radius: 50%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .project-details {
+            flex-grow: 1;
+            padding-left: 1rem;
+        }
+
+        .project-details h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-details a {
+            text-decoration: none;
+            color: #007BFF;
+            transition: color 0.3s;
+        }
+
+        .project-details a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div id="logo">Your Name</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="headshot">
+        <img src="path_to_your_headshot.jpg" alt="Your Name">
+        <p>Short bio about yourself and what you do.</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="timeline">
+            <!-- Repeat this block for each project -->
+            <div class="project-card">
+                <div class="timeline-point"></div>
+                <div class="project-details">
+                    <h3>Year</h3>
+                    <p>Short project description. <a href="project_link.html">View More</a></p>
+                </div>
+            </div>
+            <!-- End of block -->
+        </div>
+    </section>
+
+</body>
+
+</html>
+
