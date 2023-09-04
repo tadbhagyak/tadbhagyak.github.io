@@ -5,20 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tadbhagya Kumar</title>
-    <style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style> 
         /* Reset and Base Styling */
-        body, h3, p, ul, li {
+        body, h2, h3, p, ul, li {
             margin: 0;
             padding: 0;
         }
-        h2 {
-            text-align: center;
-            margin-bottom: 28px; /* This gives some space below the headers */
-        }
-
         body {
             font-family: 'Open Sans', sans-serif;
-            background-color: #f4f4f4;
+            background-color: #fff;
             color: #333;
             line-height: 1.6;
         }
@@ -35,27 +31,29 @@
             font-size: 1.5rem;
             font-weight: bold;
         }
-        nav ul {
-            list-style: none;
+
+        /* Social Icons */
+        .social-icons {
             display: flex;
             gap: 1rem;
         }
-        nav ul li a {
-            text-decoration: none;
+
+        .social-icons a {
             color: #fff;
+            font-size: 1.2rem;
+            transition: color 0.3s;
         }
 
-        #headshot {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem 0;
-            background-color: #fff;
+        .social-icons a:hover {
+            color: #ddd;
         }
-        #headshot img {
-            max-width: 200px;
-            border-radius: 50%;
-            margin-bottom: 1rem;
+
+        /* General Section Styling */
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 15%;
+            background-color: #fff;
         }
 
         /* Timeline & Card Styling */
@@ -79,8 +77,8 @@
             position: relative;
         }
         .timeline-point {
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             background-color: #333;
             border-radius: 50%;
             position: relative;
@@ -91,71 +89,79 @@
             padding-left: 1rem;
         }
 
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
         /* Experience & Projects Styling */
         .sections-container {
             display: flex;
             justify-content: space-between;
             padding: 2rem 0;
-            background-color: #fff;
         }
         #experience, #projects {
             flex: 1;
             margin: 0 2rem;
         }
+
     </style>
 </head>
 
 <body>
     <header>
-        <div id="logo">Your Name</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
+        <div id="logo">Tadbhagya Kumar</div>
+        <div class="social-icons">
+            <a href="https://twitter.com/your_username" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/your_username" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/your_username" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:your_email@example.com"><i class="fas fa-envelope"></i></a>
+        </div>
     </header>
 
-    <section id="headshot">
+    <section id="headshot" class="section">
         <img src="path_to_your_headshot.jpg" alt="Your Name">
-        <p>Short bio about yourself and what you do.</p>
+        <p>Hi! I'm a postdoctoral researcher at Argonne National Laboratory, working at the intersection of scientific
+            computing, machine learning, and high-performance computing. Since my background is in aerospace engineering, most 
+            of the problems I've worked on happen to be in this space (turbulent and reacting flows/ multi-material mechanics). 
+            These days, I'm primarily dabling with NeuralODEs, finetuning LLMs, retreival-augmented generation, and its computational 
+            aspects.</p>
     </section>
 
-    <div class="sections-container">
+    <div class="sections-container section">
         <!-- Experience Section -->
         <section id="experience">
             <h2>Experience</h2>
             <div class="timeline">
                 <div class="project-card">
-                    <div class="timeline-point"></div>
                     <div class="project-details">
                         <h3>Argonne National Laboratory</h3>
-                        <p>Role at Company A: Description of your role. <a href="role_link_1.html">View More</a></p>
+                        <p>2021 - present </p>
+                        <p>Postdoctoral researcher developing ML based reduced order models for energy and propulsion applications.</p>
                     </div>
                 </div>
                 <!-- Add more experience cards as needed -->
                 <div class="project-card">
-                    <div class="timeline-point"></div>
                     <div class="project-details">
-                        <h3>Insight Data Science</h3>
-                        <p>Role at Company A: Description of your role. <a href="role_link_1.html">View More</a></p>
+                        <h3>FinPilot</h3>
+                        <p>2023 - present </p>
+                        <p>Consulting researcher fine-tuning LLMs (SBERT, Flan-T5) for custom applications in finance and equity research.</p>
                     </div>
                 </div>
+                <!-- Add more experience cards as needed -->
                 <div class="project-card">
-                    <div class="timeline-point"></div>
+                    <div class="project-details">
+                        <h3>University of Florida</h3>
+                        <p>2016 - 2021 </p>
+                        <p>Graduate researcher, developed custom multi-physics simulation tools for deformable burning rocket propellants.</p>
+                    </div>
+                </div>
+                <!-- Add more experience cards as needed -->
+                <div class="project-card">
                     <div class="project-details">
                         <h3>University of Washington</h3>
-                        <p>Role at Company A: Description of your role. <a href="role_link_1.html">View More</a></p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="timeline-point"></div>
-                    <div class="project-details">
-                        <h3>University of Washingtons</h3>
-                        <p>Role at Company A: Description of your role. <a href="role_link_1.html">View More</a></p>
+                        <p>2014 - 2016 </p>
+                        <p>Graduate researcher, developed CFD solvers and visualization tools using CUDA.</p>
                     </div>
                 </div>
             </div>
@@ -168,11 +174,42 @@
                 <div class="project-card">
                     <div class="timeline-point"></div>
                     <div class="project-details">
-                        <h3>2023</h3>
-                        <p>Project A: Description of the project. <a href="project_link_1.html">View More</a></p>
+                        <h3>Fine tuning LLMs for equity research applications</h3>
+                        <p>Project A: Description of Project A. <a href="project_link_1.html">View More</a></p>
                     </div>
                 </div>
                 <!-- Add more project cards as needed -->
+                <div class="project-card">
+                    <div class="timeline-point"></div>
+                    <div class="project-details">
+                        <h3>ML based model reduction of wall bounded flows</h3>
+                        <p>Project A: Description of Project A. <a href="project_link_1.html">View More</a></p>
+                    </div>
+                </div>
+                <!-- Add more project cards as needed -->
+                <div class="project-card">
+                    <div class="timeline-point"></div>
+                    <div class="project-details">
+                        <h3>NeuralODEs for accelerating stiff chemical kinetics</h3>
+                        <p>Project A: Description of Project A. <a href="project_link_1.html">View More</a></p>
+                    </div>
+                </div>
+                <!-- Add more project cards as needed -->
+                <div class="project-card">
+                    <div class="timeline-point"></div>
+                    <div class="project-details">
+                        <h3>Randomized forward gradients on AI accelerators </h3>
+                        <p>Project A: Description of Project A. <a href="project_link_1.html">View More</a></p>
+                    </div>
+                </div>
+                <!-- Add more project cards as needed -->
+                <div class="project-card">
+                    <div class="timeline-point"></div>
+                    <div class="project-details">
+                        <h3>FPV based reduced order models for reacting flows </h3>
+                        <p>Project A: Description of Project A. <a href="project_link_1.html">View More</a></p>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
