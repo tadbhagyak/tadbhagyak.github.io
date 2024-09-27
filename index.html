@@ -1,218 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tadbhagya Kumar</title>
+    <title>Tadbhagya Kumar - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style> 
-        /* Reset and Base Styling */
-        body, h2, h3, p, ul, li {
+    <style>
+        :root {
+            --primary-color: #000;
+            --secondary-color: #333;
+            --text-color: #000;
+            --bg-color: #fff;
+        }
+        
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
+        
         body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #fff;
-            color: #333;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
         }
-
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem 2rem;
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            padding: 20px 0;
+        }
+        
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        header #logo {
-            font-size: 1.5rem;
-            font-weight: bold;
+        
+        .name {
+            font-size: 2rem;
+            font-weight: 700;
         }
-
-        /* Social Icons */
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-        }
-
+        
         .social-icons a {
-            color: #fff;
+            color: var(--bg-color);
             font-size: 1.2rem;
-            transition: color 0.3s;
+            margin-left: 15px;
+            transition: color 0.3s ease;
         }
-
+        
         .social-icons a:hover {
-            color: #ddd;
+            color: var(--secondary-color);
         }
-
-        /* General Section Styling */
-        .section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 15%;
-            background-color: #fff;
+        
+        main {
+            padding: 40px 0;
         }
-
-        /* Timeline & Card Styling */
-        .timeline {
-            position: relative;
-            padding-left: 40px;
-        }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 15px;
-            bottom: 0;
-            width: 2px;
-            background: repeating-linear-gradient(to bottom, #333, #333 5px, transparent 5px, transparent 10px);
-        }
-        .project-card {
-            display: flex;
-            align-items: center;
-            margin-bottom: 2rem;
-            position: relative;
-        }
-        .timeline-point {
-            width: 20px;
-            height: 20px;
-            background-color: #333;
-            border-radius: 50%;
-            position: relative;
-            z-index: 1;
-        }
-        .project-details {
-            flex-grow: 1;
-            padding-left: 1rem;
-        }
-
-        h2 {
+        
+        .intro {
             text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .intro img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
             margin-bottom: 20px;
         }
-
-        /* Experience & Projects Styling */
-        .sections-container {
+        
+        .intro p {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+        
+        .content-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .content-item {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+        
+        .content-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .content-item .date {
+            font-style: italic;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        .content-item p {
+            margin-bottom: 10px;
+        }
+        
+        .content-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .content-item a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Styles for project items with graphics */
+        .project-item {
             display: flex;
-            justify-content: space-between;
-            padding: 2rem 0;
+            align-items: flex-start;
         }
-        #experience, #projects {
+        
+        .project-graphic {
+            flex: 0 0 100px;
+            margin-right: 20px;
+        }
+        
+        .project-graphic img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        .project-content {
             flex: 1;
-            margin: 0 2rem;
         }
-
+        
+        @media screen and (max-width: 600px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .social-icons {
+                margin-top: 10px;
+            }
+            
+            .social-icons a {
+                margin: 0 7px;
+            }
+            
+            .project-item {
+                flex-direction: column;
+            }
+            
+            .project-graphic {
+                flex: 0 0 auto;
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
     </style>
 </head>
-
 <body>
     <header>
-        <div id="logo">Tadbhagya Kumar</div>
-        <div class="social-icons">
-            <a href="https://twitter.com/your_username" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://github.com/your_username" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/your_username" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:your_email@example.com"><i class="fas fa-envelope"></i></a>
+        <div class="container header-content">
+            <h1 class="name">Tadbhagya Kumar</h1>
+            <div class="social-icons">
+                <a href="https://twitter.com/your_username" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/your_username" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/your_username" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:your_email@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
     </header>
 
-    <section id="headshot" class="section">
-        <img src="path_to_your_headshot.jpg" alt="Your Name">
-        <p>Hi! I'm a postdoctoral researcher at Argonne National Laboratory, working at the intersection of scientific
-            computing, machine learning, and high-performance computing. Since my background is in aerospace engineering, most 
-            of the problems I've worked on happen to be in this space (turbulent and reacting flows/ multi-material mechanics). 
-            These days, I'm primarily dabling with NeuralODEs, finetuning LLMs, retreival-augmented generation, and its computational 
-            aspects.</p>
-    </section>
+    <main>
+        <div class="container">
+            <section class="intro">
+                <img src="/api/placeholder/400/400" alt="Tadbhagya Kumar">
+                <p>Hi! I'm a researcher at Argonne National Laboratory, working at the intersection of machine learning and computational science. I'm interested in developing scalable foundational models and algorithms for scientific applications. These days, I'm primarily dabbling with dynamics-informed autoencoders for time-dependent systems, diffusion models for super-resolution, and retrieval-augmented generation for scientific research.</p>
+            </section>
 
-    <div class="sections-container section">
-        <!-- Experience Section -->
-        <section id="experience">
-            <h2>Experience</h2>
-            <div class="timeline">
-                <div class="project-card">
-                    <div class="project-details">
+            <section class="projects">
+                <h2 class="section-title">Projects</h2>
+                <ul class="content-list">
+                    <li class="content-item project-item">
+                        <li class="content-item project-item">
+                            <div class="project-graphic">
+                                <img src="/api/placeholder/200/200" alt="Physics-constrained NeuralODEs">
+                            </div>
+                            <div class="project-content">
+                                <h3>Dynamics-informed surrogates: Autoencoder-NeuralODEs for reduced-order chemical kinetics</h3>
+                                <p>
+                                    A physics-informed autoencoder-neural ODE framework is developed 
+                                    for data-driven modeling of stiff chemical kinetics, wherein autoencoder is employed for 
+                                    dimensionality reduction of the thermochemical state and the neuralODE learns the temporal 
+                                    evolution of the dynamical system in the latent space.
+                                    <a href="https://www.researchgate.net/profile/Pinaki-Pal-3/publication/375029567_A_Physics-Constrained_NeuralODE_Approach_for_Robust_Learning_of_Stiff_Chemical_Kinetics/links/6568d9343fa26f66f43b4db9/A-Physics-Constrained-NeuralODE-Approach-for-Robust-Learning-of-Stiff-Chemical-Kinetics.pdf" target="_blank"> Paper</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="content-item project-item">
+                            <div class="project-graphic">
+                                <img src="/api/placeholder/200/200" alt="ML model reduction">
+                            </div>
+                            <div class="project-content">
+                                <h3>ML based wall models for aero-thermal simulations</h3>
+                                <p>
+                                    A priori analysis of ML methods is carried out with the goal of data-driven wall modeling 
+                                    of large eddy simulation (LES) of gas turbine film cooling flows. Parametric tests are conducted to systematically assess the influence of a wide range of input flow features 
+                                    on the accuracy of ML wall model with respect to prediction of wall shear stress. In addition, the use of spatial stencil and 
+                                    time delay is also explored within the ML wall modeling framework. 
+                                    <a href="https://asmedigitalcollection.asme.org/gasturbinespower/article-abstract/146/8/081019/1194933/Assessment-of-Machine-Learning-Wall-Modeling" target="_blank">Paper</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="content-item project-item">
+                            <div class="project-graphic">
+                                <img src="/api/placeholder/200/200" alt="Pareto-efficient framework">
+                            </div>
+                            <div class="project-content">
+                                <h3>Pareto-efficient framework for optimized reduced-order model assignment in reacting flows</h3>
+                                <p>
+                                    A modeling framework for reacting flows was developed to adaptively switch between finite-rate chemistry in limited local regions where it is necessary, 
+                                    and low-cost approaches, such as flamelet-type models wherever applicable.
+                                    <a href="https://www.researchgate.net/profile/Pinaki-Pal-3/publication/378977600_Towards_Integration_of_a_Pareto-Efficient_Combustion_Modeling_Framework_into_High-order_Nek5000_Spectral_Element_CFD_Solver/links/65fa5b22f3b56b5b2d14f7e7/Towards-Integration-of-a-Pareto-Efficient-Combustion-Modeling-Framework-into-High-order-Nek5000-Spectral-Element-CFD-Solver.pdf" target="_blank">Paper</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="content-item project-item">
+                            <div class="project-graphic">
+                                <img src="/api/placeholder/200/200" alt="Randomized forward gradients">
+                            </div>
+                            <div class="project-content">
+                                <h3>Randomized forward gradients on AI accelerators</h3>
+                                <p>
+                                    Explored the applicability and efficacy of forward gradients, where an unbiased estimator for the gradient is computed in a single forward sweep to train 
+                                    a machine leaning wall model for CFD application.
+                                    <a href="https://arxiv.org/abs/2311.11876" target="_blank">Paper</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="content-item project-item">
+                            <div class="project-graphic">
+                                <img src="/api/placeholder/200/200" alt="Randomized forward gradients">
+                            </div>
+                            <div class="project-content">
+                                <h3>Eulerian thermo-mechanical simulations of propellants</h3>
+                                <p>
+                                    Developed a 3D computational framework for strain augmented burning of solid propellants, using a Chorin-type projection approach to deal with extreme material dissimilarity.
+                                    <a href=https://doi.org/10.1016/j.combustflame.2021.111590 target="_blank">Paper</a>
+                                </p>
+                            </div>
+                        </li>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="experience">
+                <h2 class="section-title">Experience</h2>
+                <ul class="content-list">
+                    <li class="content-item">
                         <h3>Argonne National Laboratory</h3>
-                        <p>2021 - present </p>
-                        <p>Postdoctoral researcher developing ML based reduced order models for energy and propulsion applications.</p>
-                    </div>
-                </div>
-                <!-- Add more experience cards as needed -->
-                <div class="project-card">
-                    <div class="project-details">
+                        <p class="date">2021 - present</p>
+                        <p>Developing ML based reduced order models for energy and propulsion applications.</p>
+                    </li>
+                    <li class="content-item">
                         <h3>FinPilot</h3>
-                        <p>2023 - present </p>
-                        <p>Consulting researcher fine-tuning LLMs (SBERT, Flan-T5) for custom applications in finance and equity research.</p>
-                    </div>
-                </div>
-                <!-- Add more experience cards as needed -->
-                <div class="project-card">
-                    <div class="project-details">
+                        <p class="date">2024 - present</p>
+                        <p>Consulting Researcher. Fine-tuning embedding models (BERT) and building RAG for custom applications in finance and equity research.</p>
+                    </li>
+                    <li class="content-item">
                         <h3>University of Florida</h3>
-                        <p>2016 - 2021 </p>
-                        <p>Graduate researcher, developed custom multi-physics simulation tools for deformable burning rocket propellants.</p>
-                    </div>
-                </div>
-                <!-- Add more experience cards as needed -->
-                <div class="project-card">
-                    <div class="project-details">
+                        <p class="date">2016 - 2021</p>
+                        <p>Developed custom multi-physics simulation tools for deformable burning rocket propellants.</p>
+                    </li>
+                    <li class="content-item">
                         <h3>University of Washington</h3>
-                        <p>2014 - 2016 </p>
-                        <p>Graduate researcher, developed CFD solvers and visualization tools using CUDA.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- My Projects Section -->
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="timeline">
-                <div class="project-card">
-                    <div class="timeline-point"></div>
-                    <div class="project-details">
-                        <h3>Fine tuning LLMs for equity research applications</h3>
-                        <p>Project A: Description of Project A. <a href="project_link_1.html">View More</a></p>
-                    </div>
-                </div>
-                <!-- Add more project cards as needed -->
-                <div class="project-card">
-                    <div class="timeline-point"></div>
-                    <div class="project-details">
-                        <h3>ML based model reduction of wall bounded flows</h3>
-                        <p>Project A: Description of Project A. <a href="project_link_1.html">View More</a></p>
-                    </div>
-                </div>
-                <!-- Add more project cards as needed -->
-                <div class="project-card">
-                    <div class="timeline-point"></div>
-                    <div class="project-details">
-                        <h3>NeuralODEs for accelerating stiff chemical kinetics</h3>
-                        <p>Project A: Description of Project A. <a href="project_link_1.html">View More</a></p>
-                    </div>
-                </div>
-                <!-- Add more project cards as needed -->
-                <div class="project-card">
-                    <div class="timeline-point"></div>
-                    <div class="project-details">
-                        <h3>Randomized forward gradients on AI accelerators </h3>
-                        <p>Project A: Description of Project A. <a href="project_link_1.html">View More</a></p>
-                    </div>
-                </div>
-                <!-- Add more project cards as needed -->
-                <div class="project-card">
-                    <div class="timeline-point"></div>
-                    <div class="project-details">
-                        <h3>FPV based reduced order models for reacting flows </h3>
-                        <p>Project A: Description of Project A. <a href="project_link_1.html">View More</a></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
+                        <p class="date">2014 - 2016</p>
+                        <p>Developed spectral method CUDA solvers for modeling flow physics and particle dispersion.</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
 </body>
 </html>
